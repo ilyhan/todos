@@ -13,17 +13,18 @@ $color-grey: rgba(144, 144, 144, 1);
 $color-completed: rgba(121, 193, 177, 1);
 
 //font-sizes in px
-$text-title: 24;
-$text-m-title: 18;
+$text-title: 36;
+$text-m-title: 28;
 
-$text-main: 18;
-$text-m-main: 16;
+$text-main: 16;
+$text-m-main: 14;
 
-$text-small: 14;
-$text-m-small: 12;
+$text-small: 12;
+$text-m-small: 10;
 
 //border
-$border-s: 7px;
+$border-s: 3px;
+$border-circle: 50%;
 
 //transitions
 $transition-medium: all 0.3s ease;

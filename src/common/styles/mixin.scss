@@ -5,3 +5,9 @@
         #{calc($max / 1024) * 100}vw,
         #{$max}px);
 }
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

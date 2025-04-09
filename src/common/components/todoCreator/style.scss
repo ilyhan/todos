@@ -1,0 +1,101 @@
+@use "@/common/styles/styleConstants.scss" as *;
+@use "@/common/styles/mixin.scss" as *;
+
+.todos {
+    &__wrapper {
+        width: 100%;
+        background-color: $color-soft-white;
+    }
+
+    &__creator {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding-inline: 10px;
+        background-color: $color-total-white;
+        box-shadow: $shadow-def;
+    }
+
+    &__content {
+        position: relative;
+        background-color: $color-total-white;
+        box-shadow: $shadow-def;
+        z-index: 3;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $color-total-white;
+            border-top: 1px solid $color-soft-white;
+            width: 99%;
+            height: 3px;
+            left: 50%;
+            translate: -50% 0;
+            bottom: -3px;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $color-total-white;
+            border-top: 1px solid $color-soft-white;
+            width: 98%;
+            height: 3px;
+            left: 50%;
+            translate: -50% 0;
+            bottom: -6px;
+            z-index: 1;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            @include clampText($text-m-main, $text-main);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-inline: 10px;
+            border-bottom: 1px solid $color-soft-white;
+        }
+    }
+
+    &__footer {
+        @include clampText($text-m-small, $text-small);
+        color: $color-grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        padding-inline: 10px;
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &__tab-btn {
+        @include clampText($text-m-small, $text-small);
+        color: $color-grey;
+        background: transparent;
+        outline: none;
+
+        border: 1px solid $color-wheat;
+        border-radius: $border-s;
+        padding-inline: 3px;
+    }
+
+    &__clear-btn {
+        @include clampText($text-m-small, $text-small);
+        color: $color-grey;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+}

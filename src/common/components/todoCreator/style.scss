@@ -1,0 +1,20 @@
+@use "@/common/styles/styleConstants.scss" as *;
+@use "@/common/styles/mixin.scss" as *;
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    padding-inline: 10px;
+    background-color: $color-total-white;
+    box-shadow: $shadow-def;
+
+    &__button {
+        @include resetBtn;
+        font-size: 30px;
+        font-weight: 400;
+        color: $color-grey;
+        @include hoverBtn;
+    }
+}

@@ -1,7 +1,9 @@
+import Main from "@/modules/main/Main"
 
 function App() {
-    return (
+  return (
     <>
+      <Main />
     </>
   )
 }

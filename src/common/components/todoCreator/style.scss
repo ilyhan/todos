@@ -8,12 +8,10 @@
     }
 
     &__create-btn {
+        @include resetBtn;
         font-size: 30px;
         font-weight: 400;
         color: $color-grey;
-        background: transparent;
-        border: none;
-        outline: none;
     }
 
     &__creator {
@@ -59,24 +57,6 @@
         }
     }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-
-        &-item {
-            @include clampText($text-m-main, $text-main);
-            white-space: normal; /* Позволяет переносить текст */
-            word-break: keep-all;
-            text-align: start;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding-inline: 10px;
-            border-bottom: 1px solid $color-soft-white;
-        }
-    }
-
     &__footer {
         @include clampText($text-m-small, $text-small);
         color: $color-grey;
@@ -87,28 +67,9 @@
         padding-inline: 10px;
     }
 
-    &__tabs {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-    }
-
-    &__tab-btn {
-        @include clampText($text-m-small, $text-small);
-        color: $color-grey;
-        background: transparent;
-        outline: none;
-
-        border: 1px solid $color-wheat;
-        border-radius: $border-s;
-        padding-inline: 3px;
-    }
-
     &__clear-btn {
         @include clampText($text-m-small, $text-small);
+        @include resetBtn;
         color: $color-grey;
-        background: transparent;
-        border: none;
-        outline: none;
     }
 }

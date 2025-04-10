@@ -1,14 +1,18 @@
 import Input from "@/common/ui/input/Input";
-import "@/common/components/todoCreator/style.scss";
-import Checkbox from "@/common/ui/checkbox/Checkbox";
 import { useEffect, useState } from "react";
 import { ITodo } from "@/common/interfaces/todos";
 import { getTodos } from "@/common/utils/getTodos";
 import { setTodos as setTodosLs } from "@/common/utils/setTodods";
+import { TTab } from "@/common/interfaces/tab";
+import { filterTodos } from "@/common/utils/filterTodos";
+import "@/common/components/todoCreator/style.scss";
+import TodosList from "@/common/components/todosList/TodosList";
+import TabButtons from "@/common/components/tabButtons/TabButtons";
 
 const TodoCreator = () => {
-    const [todos, setTodos] = useState<ITodo[]>(getTodos);
     const [value, setValue] = useState('');
+    const [selctedTab, setSelectedTab] = useState<TTab>("All");
+    const [todos, setTodos] = useState<ITodo[]>(getTodos("All"));
 
     const addNewTodo = () => {
         if (value.trim()) {
@@ -52,31 +56,15 @@ const TodoCreator = () => {
             </div>
 
             <div className="todos__content">
-                <ul className="todos__list">
-                    {todos.map(item => (
-                        <li className="todos__list-item" key={item.id}>
-                            <Checkbox isChecked={item.isCompleted} onChecked={() => handleChecked(item.id)} />
-                            {item.content}
-                        </li>
-                    ))}
-                </ul>
+                <TodosList
+                    todos={filterTodos(todos, selctedTab)}
+                    onChecked={handleChecked}
+                />
 
                 <div className="todos__footer">
                     <p className="todos__count">2 items left</p>
 
-                    <div className="todos__tabs">
-                        <button className="todos__tab-btn">
-                            All
-                        </button>
-
-                        <button className="todos__tab-btn">
-                            Active
-                        </button>
-
-                        <button className="todos__tab-btn">
-                            Completed
-                        </button>
-                    </div>
+                    <TabButtons onSelect={setSelectedTab} selectedTab={selctedTab}/>
 
                     <button className="todos__clear-btn">
                         Clear completed

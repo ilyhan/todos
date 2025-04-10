@@ -1,9 +1,12 @@
 import { ITodo } from "@/common/interfaces/todos";
+import { TTab } from "@/common/interfaces/tab";
+import { filterTodos } from "./filterTodos";
 
-export function getTodos(): ITodo[] {
+export function getTodos(query: TTab): ITodo[] {
     const storedTodos = localStorage.getItem('todos');
     if (storedTodos) {
-        return JSON.parse(storedTodos) as ITodo[];
+        let res: ITodo[] = JSON.parse(storedTodos);
+        return filterTodos(res, query);
     }
 
     return [];

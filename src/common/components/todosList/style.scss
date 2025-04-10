@@ -1,0 +1,20 @@
+@use "@/common/styles/styleConstants.scss" as *;
+@use "@/common/styles/mixin.scss" as *;
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    
+    &__item {
+        @include clampText($text-m-main, $text-main);
+        overflow-wrap: break-word;
+        overflow: hidden;
+        text-align: start;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-inline: 10px;
+        border-bottom: 1px solid $color-soft-white;
+    }
+}

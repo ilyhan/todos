@@ -11,7 +11,10 @@ const TodosList = ({ todos, onChecked }: ITabsProps) => {
     return (
         <ul className="todos-list">
             {todos.map(item => (
-                <li className="todos-list__item" key={item.id}>
+                <li
+                    key={item.id}
+                    className={`todos-list__item ${item.isCompleted && 'todos-list__item_complete'}`}
+                >
                     <Checkbox
                         isChecked={item.isCompleted}
                         onChecked={() => onChecked(item.id)}

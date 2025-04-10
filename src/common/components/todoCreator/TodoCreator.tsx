@@ -8,6 +8,7 @@ import { filterTodos } from "@/common/utils/filterTodos";
 import "@/common/components/todoCreator/style.scss";
 import TodosList from "@/common/components/todosList/TodosList";
 import TabButtons from "@/common/components/tabButtons/TabButtons";
+import { countRemaining } from "@/common/utils/countRemaining";
 
 const TodoCreator = () => {
     const [value, setValue] = useState('');
@@ -72,9 +73,9 @@ const TodoCreator = () => {
                 />
 
                 <div className="todos__footer">
-                    <p className="todos__count">2 items left</p>
+                    <p className="todos__count">{countRemaining(todos)} items left</p>
 
-                    <TabButtons onSelect={setSelectedTab} selectedTab={selctedTab}/>
+                    <TabButtons onSelect={setSelectedTab} selectedTab={selctedTab} />
 
                     <button className="todos__clear-btn" onClick={handleClear}>
                         Clear completed

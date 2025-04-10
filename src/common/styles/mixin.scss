@@ -1,0 +1,28 @@
+@use "@/common/styles/styleConstants" as *;
+
+@mixin clampText($min, $max) {
+    font-size: clamp(#{$min}px,
+        #{calc($max / 1024) * 100}vw,
+        #{$max}px);
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin resetBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+@mixin hoverBtn {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transition: $transition-fast;
+            opacity: 0.8;
+        }
+    }
+}

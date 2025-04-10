@@ -1,0 +1,21 @@
+@use "@/common/styles/mixin.scss" as *;
+@use "@/common/styles/styleConstants.scss" as *;
+
+.main {
+    @include flexCenter;
+    width: 100%;
+    min-height: 100vh;
+
+    &__title {
+        @include clampText($text-m-title, $text-title);
+        color: $color-wheat;
+        font-weight: 400;
+    }
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}

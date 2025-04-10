@@ -1,0 +1,38 @@
+//colors 
+//black 
+$color-total-black: rgba(0, 0, 0, 1);
+$color-black: rgba(77, 77, 77, 1);
+//white 
+$color-total-white: rgba(255, 255, 255, 1);
+$color-background: rgba(245, 245, 245, 1);
+$color-wheat: rgba(233, 217, 217, 1);
+$color-soft-white: rgba(230, 230, 230);
+//grey 
+$color-grey: rgba(144, 144, 144, 1);
+//green
+$color-completed: rgba(121, 193, 177, 1);
+
+//font-sizes in px
+$text-title: 36;
+$text-m-title: 28;
+
+$text-main: 16;
+$text-m-main: 14;
+
+$text-small: 12;
+$text-m-small: 10;
+
+//border
+$border-s: 3px;
+$border-circle: 50%;
+
+//transitions
+$transition-medium: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+
+//shadow
+$shadow-def: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+//breakpoints
+$mobile: 400px;
+

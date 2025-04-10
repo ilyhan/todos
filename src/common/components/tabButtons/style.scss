@@ -1,0 +1,21 @@
+@use "@/common/styles/styleConstants.scss" as *;
+@use "@/common/styles/mixin.scss" as *;
+
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &__button {
+        @include clampText($text-m-small, $text-small);
+        @include resetBtn;
+        color: $color-grey;
+        padding-inline: 3px;
+        @include hoverBtn;
+
+        &_active {
+            outline: 1px solid $color-wheat;
+            border-radius: $border-s;
+        }
+    }
+}

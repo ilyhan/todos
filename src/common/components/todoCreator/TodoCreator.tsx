@@ -41,6 +41,16 @@ const TodoCreator = () => {
         setTodos(updatedTodos);
     };
 
+    const handleClear = () => {
+        const updatedTodos = todos.filter(item => {
+            if (!item.isCompleted) {
+                return item;
+            }
+        });
+
+        setTodos(updatedTodos);
+    };
+
     return (
         <div className="todos__wrapper">
             <div className="todos__creator">
@@ -66,7 +76,7 @@ const TodoCreator = () => {
 
                     <TabButtons onSelect={setSelectedTab} selectedTab={selctedTab}/>
 
-                    <button className="todos__clear-btn">
+                    <button className="todos__clear-btn" onClick={handleClear}>
                         Clear completed
                     </button>
                 </div>

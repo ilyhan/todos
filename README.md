@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+# Todos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Добро пожаловать в Todos. Это простое и удобное приложение позволяет управлять списком задач, разделяя их на выполненные и невыполненные, а также отслеживать количество оставшихся дел.
 
-Currently, two official plugins are available:
+## Основные возможности:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Добавление новых задач**  
+  Введите новую задачу в поле ввода и нажмите кнопку "+" для добавления.
+  
+- **Управление задачами**  
+  Просматривайте задачи в трех категориях:
+  - Общий список всех задач
+  - Список невыполненных задач
+  - Список выполненных задач
 
-## Expanding the ESLint configuration
+- **Отметка задач как выполненных/невыполненных**  
+  Щелкните по чекбоксу рядом с задачей, чтобы отметить её как выполненную или вернуть в список невыполненных.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Количество оставшихся задач**  
+  В интерфейсе отображается текущее количество невыполненных задач.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Очистка выполненных задач**  
+  Нажмите кнопку "Clear completed", чтобы удалить все выполненные задачи из списка.
+
+## Технологии:
+
+- **TypeScript**
+- **React**
+- **Vitest**
+
+## Запуск проекта
+
+Для запуска проекта выполните следующие шаги:
+
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone https://github.com/your-repo/todo-app.git
+   ```
+
+2. **Перейдите в папку проекта:**
+   ```bash
+   cd todos
+   ```
+
+3. **Установите зависимости:**
+   ```bash
+   npm install
+   ```
+
+4. **Запустите приложение:**
+   ```bash
+   npm run start
+   ```
+   После выполнения этих команд приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000), и вы сможете работать с ним в браузере.
+
+## Превью
+
+Вы можете протестировать приложение онлайн, перейдя по ссылке:  
+[Todos on Netlify](https://shimmering-douhua-310af3.netlify.app/)
+
+## Тестирование
+
+Для запуска тестов выполните команду:
+```bash
+npm run test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Контакты
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Если у вас возникли вопросы или предложения, свяжитесь со мной:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Email**: ilya.nesterov2003@yandex.ru
+- **Telegram**: [@DJNest](https://t.me/DJNest)
+
+## Спасибо за интерес к моему проекту!
+
+Это приложение создано с вниманием к деталям и стремлением к качеству. Буду рад услышать ваше мнение или предложить улучшения!

@@ -34,7 +34,7 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/your-repo/todo-app.git
+   git clone https://github.com/ilyhan/todos.git
    ```
 
 2. **Перейдите в папку проекта:**
